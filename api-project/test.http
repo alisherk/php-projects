@@ -1,0 +1,52 @@
+GET http://localhost/web/api/tasks/7 HTTP/1.1
+X-Api-Key: 7873c9ad1c62ff968f5feb5f799833b0
+
+### Using auth bearer
+GET http://localhost/web/api/tasks HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsIm5hbWUiOiJNYXJ5IiwiZXhwIjoxNjc2NTc3OTE3fQ.vpFyT8u5awHy7SoTWhqs9nuhyh3i_I_ueNZ7Xs4WaJo
+###
+POST http://localhost/web/api/tasks HTTP/1.1
+Content-Type: application/json
+X-Api-Key: 7873c9ad1c62ff968f5feb5f799833b0
+
+{
+    "name": "Study for exam",
+    "priority": "2",
+    "is_completed": false
+}
+
+###
+PATCH  http://localhost/web/api/tasks/7 HTTP/1.1
+Content-Type: application/json
+X-Api-Key: 7873c9ad1c62ff968f5feb5f799833b0
+
+{
+    "name": "study for exam harder",
+    "priority": 1,
+    "is_completed": false
+}
+
+###
+DELETE  http://localhost/web/api/tasks/6 HTTP/1.1
+
+### Login endpoint
+POST http://localhost/web/api/login.php HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "maryk",
+    "password": 123456
+}
+
+### Refresh endpoint !IMPORTANT please note if you add trailing comman, it breaks 
+//$data = (array) json_decode(file_get_contents("php://input"), true);
+POST http://localhost/web/api/refresh.php HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImV4cCI6MTY3NzAwNjAyMn0.PFm1t0f7PbyDNZFMOM9rcRDLGXdGBUQnSiALOfcyI04"
+}
+
+###
+

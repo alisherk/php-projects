@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"ExampleTest::testAdd":0.001,"FunctionTest::testAddReturnsCorrectSum":0,"FunctionTest::testDoesNotRreturnIncorrectSum":0,"UserTest::testReturnsFullname":0,"UserTest::testFullNameIsEmpty":0}}
